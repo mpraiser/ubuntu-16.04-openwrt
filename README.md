@@ -16,12 +16,11 @@ Ubuntu 16.04 docker to compile OpenWrt, getting rid of library version problem.
  
   Run the container as a terminal.
  
-For the first time, do:
+For the first time, run:
 
 ```bash
 sh install.sh
 sh build.sh
-sh run.sh
 ```
 
 Once necessary preparation is done, just run:
@@ -29,4 +28,13 @@ Once necessary preparation is done, just run:
 ```bash
 sh run.sh
 ```
-  
+
+## Compile OpenWrt
+
+Possibily 
+
+```bash
+export FORCE_UNSAFE_CONFIGURE=1
+``` 
+
+is needed, because container runs as root, while OpenWrt doesn't allow root to compile by default.
